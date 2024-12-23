@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RockPaperScissorsGame</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  </head>
+  <body>
+    <div id="game-container">
+      <h1>Rock, Paper, Scissors</h1>
+      <div id="rounds-info">
+        <p>Total Rounds: <span id="total-rounds">5</span></p>
+        <p>Rounds Left: <span id="rounds-left">5</span></p>
+      </div>
+      <div id="scoreboard">
+        <p><strong>You:</strong> <span id="player-score">0</span></p>
+        <p><strong>Computer:</strong> <span id="computer-score">0</span></p>
+      </div>
+
+      <div class="choices">
+        <button class="choice" id="rock">Rock</button>
+        <button class="choice" id="paper">Paper</button>
+        <button class="choice" id="scissors">Scissors</button>
+      </div>
+
+      <div id="game-result">
+        <p id="round-result"></p>
+        <p id="computer-choice"></p>
+      </div>
+
+      <!-- game over screen -->
+      <div id="game-over" style="display: none">
+        <h2>Game Over!</h2>
+        <p><b>Final Score:</b></p>
+        <p><b>You:</b> <span id="final-player-score"></span></p>
+        <p><b>Computer:</b> <span id="final-computer-score"></span></p>
+        <p id="final-message"></p>
+
+        <!-- Win Animation -->
+        <div id="win-animation" style="display: none">
+          <!-- Crackers will be dynamically added here -->
+        </div>
+
+        <!-- loose Animation -->
+        <div id="lose-animation">
+          <div class="sad-faces"></div>
+        </div>
+
+        <button id="restart-btn">Restart</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
